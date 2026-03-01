@@ -2,13 +2,13 @@ import React from "react";
 import { Plus, ChevronRight, CheckCircle2, Star } from "lucide-react";
 
 // Local assets ko waise hi rakhein
-import packingIcon from "../assets/mycollection (2)/png/003-parcel-protection.png";
-import acIcon from "../assets/mycollection (2)/png/004-technician.png";
+import packingIcon from "../assets/mycollection/png/003-parcel-protection.png";
+import acIcon from "../assets/mycollection/png/004-technician.png";
 import roIcon from "../assets/ro.png";
 import furnitureIcon from "../assets/furniture.png";
 import unpackingIcon from "../assets/unpacking.png";
-import unpacking from "../assets/mycollection (2)/png/001-unpacking.png"
-import Fan from "../assets/mycollection (2)/png/006-ceiling-fan.png"
+import unpacking from "../assets/mycollection/png/001-unpacking.png"
+import Fan from "../assets/mycollection/png/006-ceiling-fan.png"
 export default function AddOnServicesInfo() {
   const services = [
     { title: "Professional Packing", desc: "Multi-layer protection for fragile items", price: "799", icon: packingIcon, tag: "Popular" },

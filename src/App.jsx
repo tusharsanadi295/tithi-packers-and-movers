@@ -36,7 +36,7 @@ import BlogPage from "./pages/blog";
 import BlogDetail from "./pages/blogDetail";
 import AdminCreateBlog from "./admin/pages/AdminCreateBlog";
 import BlogSection from "./pages/BlogSection";
-import HomePage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 import ScrollToTop from "./components/ScrollToTop";
 import ChatWidget from "./components/ChatWidget";
 import ShiftingCalc from "./components/ShiftingCalc";

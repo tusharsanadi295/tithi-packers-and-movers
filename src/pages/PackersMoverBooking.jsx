@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { CheckCircle, ChevronRight, X, Sun, CloudSun, Moon } from "lucide-react";
-import singlelayer from "../assets/mycollection (2)/png/002-box.png"
-import multilayer from "../assets/mycollection (2)/png/003-parcel-protection.png"
-import ac from "../assets/mycollection (2)/png/004-technician.png"
-import unpacking from "../assets/mycollection (2)/png/001-unpacking.png"
-import fan from "../assets/mycollection (2)/png/006-Ceiling-fan.png"
-import bed from "../assets/mycollection (2)/png/005-hotel-room.png"
+import singlelayer from "../assets/mycollection/png/002-box.png"
+import multilayer from "../assets/mycollection/png/003-parcel-protection.png"
+import ac from "../assets/mycollection/png/004-technician.png"
+import unpacking from "../assets/mycollection/png/001-unpacking.png"
+import fan from "../assets/mycollection/png/006-ceiling-fan.png"
+import bed from "../assets/mycollection/png/005-hotel-room.png"
 
 const ADD_ON_CONFIG = {
   single_packing: {

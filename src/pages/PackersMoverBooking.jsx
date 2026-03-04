@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { CheckCircle, ChevronRight, X, Sun, CloudSun, Moon } from "lucide-react";
 import singlelayer from "../assets/mycollection/png/002-box.png"
@@ -7,22 +8,22 @@ import ac from "../assets/mycollection/png/004-technician.png"
 import unpacking from "../assets/mycollection/png/001-unpacking.png"
 import fan from "../assets/mycollection/png/006-ceiling-fan.png"
 import bed from "../assets/mycollection/png/005-hotel-room.png"
-
+import { ArrowLeft } from "lucide-react";
 const ADD_ON_CONFIG = {
   single_packing: {
     label: "Single Layer Packing",
     type: "percentage",
-    value: 10
+    value: 7
   },
   multi_packing: {
     label: "Multi-layer Bubble Wrap",
     type: "percentage",
-    value: 20
+    value: 15
   },
   unpacking: {
     label: "Unpacking All Items",
     type: "percentage",
-    value: 25
+    value: 10
   },
   ac_install: {
     label: "AC Installation",
@@ -306,9 +307,18 @@ const totalPayable =(selectedDate?.price || 0) + addOnTotal;
 <div className="mb-14 mt-8">
 
   <div className="flex items-center justify-between mb-5">
+     
     <h3 className="text-[15px] font-bold text-slate-800 uppercase tracking-wider">
       Select Shifting Date
     </h3>
+    <Link 
+  to="/packermover"
+  className="flex items-center gap-2 text-sky-600 font-bold mb-6 
+             hover:translate-x-[-4px] transition-transform no-underline"
+>
+  <ArrowLeft size={18} strokeWidth={2.5} />
+  Back to Add Items
+</Link>
     {selectedDate?.isWeekend && (
       <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-1 rounded border border-amber-100 animate-in fade-in duration-300">
         Peak Day Pricing

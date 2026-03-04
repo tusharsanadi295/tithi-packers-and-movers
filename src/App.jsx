@@ -64,7 +64,6 @@ function Home() {
       <BlogSection />
       <HomePage />
       <PackersMoversSEO />
-      <ChatWidget/>
       
 
     </>
@@ -87,7 +86,9 @@ export default function App() {
     <>
 
       <ScrollToTop/>
+      <div className="min-h-screen bg-white pb-20">
       <Header />
+
 
       <Routes>
         {/* Home */}
@@ -125,7 +126,7 @@ export default function App() {
       </Routes>
 
       <Footer />
-      
+      </div>
     </>
   );
 }

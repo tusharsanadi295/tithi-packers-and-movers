@@ -1,6 +1,6 @@
 import { useParams, useNavigate,Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-
+import { ArrowRight } from "lucide-react";
 export default function BlogDetail() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -83,12 +83,23 @@ export default function BlogDetail() {
                   <p className="text-slate-400 mb-6 text-sm">
                     Get an instant price estimate from Tithi Packers and Movers.
                   </p>
-                  <Link 
-              to="/booking" 
-              className="w-full bg-sky-600 hover:bg-sky-500 py-4 rounded-xl font-black transition-all shadow-lg shadow-sky-600/30"
-            >
-              GET FREE QUOTE
-            </Link>
+                 
+
+<Link 
+  to="/getquote" 
+  className="w-full sm:w-auto inline-flex items-center gap-2 justify-center
+             px-8 py-4 
+             text-lg font-semibold tracking-wide text-white
+             bg-gradient-to-r from-sky-600 to-blue-700
+             rounded-2xl
+             shadow-xl shadow-sky-600/30
+             transition-all duration-300 ease-in-out
+             hover:shadow-sky-500/50 hover:scale-105
+             active:scale-95"
+>
+  GET FREE QUOTE
+  <ArrowRight size={20} />
+</Link>
                   
                   <a href="tel:+918160081145" className="block text-center mt-4 text-xs font-bold text-slate-400 hover:text-white transition-colors">
                     Or Call: +91 8160081145
@@ -98,19 +109,6 @@ export default function BlogDetail() {
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-sky-600/20 rounded-full blur-3xl"></div>
               </div>
 
-              {/* NEWSLETTER/SUBSCRIBE */}
-              <div className="bg-white rounded-3xl p-8 border border-slate-100">
-                <h4 className="font-black text-slate-900 mb-2">Subscribe to our newsletter</h4>
-                <p className="text-slate-500 text-sm mb-4">Get the latest packing hacks and moving checklists directly in your inbox.</p>
-                <input 
-                  type="email" 
-                  placeholder="Your Email" 
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl mb-3 outline-none focus:border-sky-500"
-                />
-                <button className="w-full border-2 border-slate-900 py-3 rounded-xl font-black hover:bg-slate-900 hover:text-white transition-all">
-                  Join Now
-                </button>
-              </div>
 
             </div>
           </aside>

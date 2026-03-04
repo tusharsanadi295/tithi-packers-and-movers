@@ -13,7 +13,6 @@ import {
   UserPlus,
   ArrowRight
 } from "lucide-react";
-import logo from "../assets/logo-removebg-preview.png";
 
 export default function Header() {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -140,7 +139,7 @@ const lastScrollY = useRef(0);
             </a>
 
             <Link 
-              to="/getquote" 
+              to="/" 
               className="hidden md:flex items-center gap-2 bg-sky-600 text-white px-6 py-3 rounded-full font-bold text-xs no-underline hover:bg-sky-700 shadow-lg shadow-sky-100 transition active:scale-95"
             >
               GET FREE QUOTE
@@ -162,11 +161,8 @@ const lastScrollY = useRef(0);
                 <div className="px-4 py-3 bg-slate-50 border-b border-slate-100">
                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Welcome Guest</p>
                 </div>
-                <Link to="/Login" className="flex items-center gap-3 px-4 py-3.5 text-sm font-bold text-slate-700 hover:bg-sky-50 no-underline border-b border-slate-50 transition">
-                  <LogIn size={18} className="text-sky-600" />Customer Login
-                </Link>
                 <Link to="/AdminLogin" className="flex items-center gap-3 px-4 py-3.5 text-sm font-bold text-slate-700 hover:bg-sky-50 no-underline border-b border-slate-50 transition">
-                  <LogIn size={18} className="text-sky-600" />Admin Login 
+                  <LogIn size={18} className="text-sky-600" />Sign In 
                 </Link>
                 
                 
@@ -207,7 +203,7 @@ const lastScrollY = useRef(0);
 
     {/* MENU LINKS */}
     <div className="flex flex-col gap-6">
-      {["Home", "Services", "Track", "About", "Contact"].map((item) => (
+      {["Home", "Services", "Blog", "About", "Contact"].map((item) => (
         <Link 
           key={item} 
           to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
@@ -228,7 +224,7 @@ const lastScrollY = useRef(0);
         <Phone size={20} className="text-sky-600" /> CALL SUPPORT
       </a>
       <Link 
-        to="/booking" 
+        to="/getquote" 
         onClick={() => setIsMenuOpen(false)} 
         className="bg-sky-600 text-white text-center py-4 rounded-2xl font-extrabold no-underline shadow-xl shadow-sky-100 text-lg active:scale-95 transition-all"
       >
@@ -241,7 +237,6 @@ const lastScrollY = useRef(0);
       {/* Adjusting Spacer for the bigger header */}
       <div className="h-20 md:h-24" />
 
-      {/* ================= ANIMATED LIGHT MOBILE STICKY BAR ================= */}
     {/* ================= CLEAN PROFESSIONAL MOBILE DOCK ================= */}
 {!hideOnRoutes.includes(location.pathname) && (
   <div className={`fixed bottom-6 left-0 right-0 z-[110] md:hidden px-6 transition-all duration-500 ease-in-out
